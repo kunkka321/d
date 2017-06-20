@@ -1,0 +1,18 @@
+Main Activity (Conexion entre el Adapter y el Main)
+===================================================
+
+public class MainActivity extends AppCompatActivity {
+
+    ViewPager pager;
+    ScreenPagerAdapter mPagerAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        pager = (ViewPager) findViewById(R.id.pager);
+        mPagerAdapter = new ScreenPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(mPagerAdapter);
+    }
+}
